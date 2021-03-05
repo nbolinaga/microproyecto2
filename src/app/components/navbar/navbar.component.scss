@@ -11,9 +11,7 @@ nav {
   z-index: 99;
   width: 100%;
   height: 10vmin;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  @extend .center;
   background-color: $blanco;
 
   &::after {
@@ -28,6 +26,7 @@ nav {
 
   ul{
     list-style: none;
+    @extend .center;
 
     li{
       text-decoration: none;
@@ -35,6 +34,7 @@ nav {
       margin: 2vw;
       font-weight: bold;
       font-size: 1.5vw;
+      @extend .center;
 
       a{
         text-decoration: none;
@@ -55,6 +55,8 @@ nav {
         border: 2px solid $base;
         height: 5vh;
         margin-left: 1vw;
+        list-style: none;
+        display: flex;
       }
     }
   }
