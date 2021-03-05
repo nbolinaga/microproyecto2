@@ -1,0 +1,15 @@
+<nav>
+  <h2 class="logo"><i class="fas fa-ticket-alt"></i> Cartelera Caracas</h2>
+  <ul id="nav-list">
+    <li class="nav-item"><a [routerLink]="['']">INICIO</a></li>
+    <li class="nav-item"><a [routerLink]="['peliculas']">PELICULAS</a></li>
+    <li class="nav-item" *ngIf="user"><a [routerLink]="['reservas']">RESERVAS</a></li>
+    <li class="nav-item">
+      <ng-template [ngIf]="!user" [ngIfElse]="perfil"><a (click)="logIn()">INGRESAR</a></ng-template>
+      <ng-template #perfil><a>{{user.displayName}}</a><img class="pp" [src]="user.photoURL" alt=""></ng-template>
+    </li>
+    <li class="nav-item" *ngIf="user"><a (click)="logOut()" class="logOut">Log Out</a></li>
+  </ul>
+</nav>
+<app-login *ngIf ="showLogIn"></app-login>
+<div id="closeModal" *ngIf ="showLogIn" (click)="logIn()"></div>

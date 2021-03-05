@@ -1,22 +1,10 @@
 <div class="auth-form">
-  <div class="wrapper">
-    <!-- <form [formGroup]="authForm" class="form-container" (ngSubmit)="onSubmit()">
-      <div class="=input-container" *ngIf="isRegister">
-        <label for="displayName">Ingrese su nombre:</label>
-        <input type="text" id="displayName" placeholder="John Doe" formControlName="displayName">
-      </div>
-      <div class="input-container">
-        <label for="email">Ingrese su email:</label>
-        <input type="email" id="email" placeholder="john@unimet.edu.ve" formControlName="email">
-      </div>
-      <div class="input-container">
-        <label for="password">Ingrese su clave:</label>
-        <input type="password" id="password" placeholder="***********" formControlName="password">
-      </div>
-      <button type="submit" class="btn-create">Ingresar</button>
-    </form> -->
-    <div class="form-container buttons">
-      <button type="button" (click)="googleLogin()">Google</button>
-    </div>
+  <h2 class="logo"><i class="fas fa-ticket-alt"></i> Cartelera Caracas</h2>
+  <h3>Ingresa usando tu email de google</h3>
+  <div class="buttons">
+    <button type="button" class="btn-alt" (click)="googleLogin()">
+      <img src="../../../assets/google.png" alt="" />
+    </button>
   </div>
+  <p>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.</p>
 </div>

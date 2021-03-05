@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+h1,h2,h3,h4,h5,h6,p,a{
+  font-family: $primary;
+}
+
+a:visited{
+  color: initial;
+}
+
+body {
+  background-color: $base;
+  overflow-x: hidden;
+}
+
+button.btn-pri{
+  border: none;
+  background-color: $base;
+  padding: 2vh 3vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.btn-alt{
+  border: 3px solid $base;
+  background-color: $blanco;
+  padding: 1.5vh 3vw;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+h2.logo{
+  font-size: 2vw;
+  color: $base;
+  font-family: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+
+  i{
+    font-size: 3vmax;
+    margin-right: 1vw;
+  }
+}

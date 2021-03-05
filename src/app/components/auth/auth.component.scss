@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+.auth-form{
+  text-align: center;
+  h3{
+    color: $detalles;
+    margin-top: 2vh;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    img{
+      margin-top: .5vh;
+      height: 4vh;
+    }
+  }
+  p{
+    color: rgba($base,.7);
+    margin-top: 5vh;
+    font-size: .5vw;
+  }
+
+}
+
