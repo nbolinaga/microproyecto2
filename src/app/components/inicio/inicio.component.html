@@ -1,0 +1,7 @@
+<app-pelicula-card *ngFor="let pelicula of allPeliculas | async"
+[title]="pelicula.title"
+[imagen]="pelicula.poster_path"
+[popularidad]="pelicula.vote_count"
+[idioma]="pelicula.original_language"
+>
+</app-pelicula-card>
