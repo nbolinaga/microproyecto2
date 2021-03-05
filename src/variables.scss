@@ -6,3 +6,9 @@ $light:  #c95040;
 
 $primary: "Oswald", Arial, Helvetica, sans-serif;
 $secondary: 'Open Sans', sans-serif;
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
