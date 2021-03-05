@@ -39,27 +39,11 @@ export class LoginService {
     }
   }
 
+  getCurrentUser(): Observable<firebase.User>{
+    return this.afAuth.user;
+  }
+
   get isAuthenticated(): boolean {
     return this.authState !== null;
-  }
-
-  get currentUserId(): string {
-    return this.isAuthenticated ? this.authState.uid : null;
-  }
-
-  get userData(): any {
-    if (!this.isAuthenticated) {
-      return [];
-    }
-
-    return [
-      {
-        id: this.authState.uid,
-        displayName: this.authState.displayName,
-        email: this.authState.email,
-        phoneNumber: this.authState.phoneNumber,
-        photoURL: this.authState.photoURL
-      }
-    ];
   }
 }
