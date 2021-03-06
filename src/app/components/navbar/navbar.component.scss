@@ -4,6 +4,15 @@
   width: 100vw;
   height: 100%;
   background-color: transparent;
+  z-index: 1;
+
+  .close{
+    position: relative;
+    top: 10vw;
+    right: 10vw;
+    color: $blanco;
+    font-size: 10vw;
+  }
 }
 nav {
   position: fixed;
@@ -17,9 +26,9 @@ nav {
   &::after {
     content: " ";
     width: 100%;
-    background-color: $detalles;
+    background-color: $light;
     position: absolute;
-    height: .5vw;
+    height: 1vw;
     top: 10vmin;
     z-index: -1;
   }
@@ -42,11 +51,8 @@ nav {
         cursor: pointer;
 
         &.logOut{
-          color: $light;
-          font-size: 1vw;
-          background-color: $base;
-          padding: 1vh 2vw;
-          border-radius: 5px;
+          color: $base;
+          font-size: 3vw;
         }
       }
 
