@@ -1,0 +1,21 @@
+@import "../../../variables.scss";
+h2.res-title,.subtitle{
+  color: $blanco;
+  margin-top: 12vmin;
+  font-size: 5vmax;
+  text-align: center;
+}
+.subtitle{
+  font-size: 2vmax;
+}
+.Reserva, input{
+  text-align: center;
+  color: $blanco;
+  font-family: $secondary;
+  font-size: 2vmax;
+
+  input{
+    border-radius: 0;
+    color: $detalles;
+  }
+}
