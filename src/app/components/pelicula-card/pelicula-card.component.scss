@@ -8,6 +8,7 @@ div.pelicula-container{
   position: relative;
   cursor: pointer;
 
+
   &::after{
     content: " ";
     width: 100%;
@@ -22,6 +23,7 @@ div.pelicula-container{
   h4{
     color: $detalles;
     font-size: 2vw;
+    margin: 0 2vw;
   }
 
   p{

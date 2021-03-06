@@ -1,8 +1,8 @@
 <div class="pelicula-container">
   <img [src]="imagen" alt="">
   <h4>{{title}}</h4>
-  <p>Popularidad: <span>{{popularidad}}</span></p>
   <p>Idioma: <span>{{idioma}}</span></p>
+  <p>Popularidad: <span>{{popularidad}}</span></p>
   <p>Estreno: <span>{{date}}</span></p>
   <button (click)="favorited()" class="favButton" *ngIf="logged">
     <ng-template [ngIf]="!favorite" [ngIfElse]="fav"><i class="far fa-heart"></i></ng-template>
