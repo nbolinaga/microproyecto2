@@ -18,8 +18,11 @@ import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListaComponent } from './components/lista/lista.component'
 
+import { FormsModule } from '@angular/forms';
+
 const routes: Routes = [
   {path: '', component: InicioComponent},
+  {path: 'lista', component: ListaComponent},
 ]
 
 @NgModule({
@@ -40,7 +43,8 @@ const routes: Routes = [
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
