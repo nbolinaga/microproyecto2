@@ -12,6 +12,7 @@
     width: auto;
     height: 60vh;
     margin: 5vh;
+    box-shadow: 15px 15px 20px -5px rgba(0,0,0,0.8);
     @media #{$telefono}{
       width: 80vw;
       margin: 5vh 0;
@@ -62,4 +63,13 @@
       }
     }
   }
+  .img-container{
+    text-align: center;
+
+    .reserva-btn{
+      position: relative;
+      top:-8vh;
+    }
+  }
 }
+
