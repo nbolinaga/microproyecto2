@@ -1,6 +1,6 @@
 <div class="paginacion top">
   <button (click)="prevPage()" class="left"><</button>
-  <input type="text" placeholder="buscar" [(ngModel)]="search" (keyup.enter)="getBusqueda()">
+  <input type="text" placeholder="Buscar" [(ngModel)]="search" (keyup.enter)="getBusqueda()">
   <button (click)="nextPage()" class="right">></button>
 </div>
 <h3>{{currentPage}}</h3>
@@ -9,7 +9,7 @@
     *ngFor="let pelicula of peliculas | async "
     [title]="pelicula.title"
     [imagen]="pelicula.poster_path"
-    [popularidad]="pelicula.popularity"
+    [popularidad]="pelicula.vote_average"
     [idioma]="pelicula.original_language"
     [date]="pelicula.release_date"
     [id]="pelicula.id"

@@ -1,5 +1,8 @@
 <div class="detalles-container">
-   <img [src]="'https://image.tmdb.org/t/p/original' + this.peliculas.poster_path" alt="">
+  <div class="img-container">
+    <img [src]="'https://image.tmdb.org/t/p/original' + this.peliculas.poster_path" alt="">
+    <button class="btn-sec reserva-btn" [routerLink]="['/reservas']">Reservar Funcion</button>
+  </div>
   <div class="info">
     <h2><button (click)="favorited()" class="favButton" *ngIf="logged">
       <ng-template [ngIf]="!favorite" [ngIfElse]="fav"><i class="far fa-heart"></i></ng-template>
