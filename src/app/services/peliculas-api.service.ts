@@ -2,17 +2,24 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { LoginService } from 'src/app/services/login.service';
+import firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PeliculasApiService {
+  user: firebase.User = null;
   page: number = 2;
   KEY = '5ba4b657ce8be5d3b83bdfd09f8df740';
   URL_ESTRENOS = `https://api.themoviedb.org/3/movie/upcoming?api_key=${this.KEY}&language=es-ES`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, public authService: LoginService) {
+    this.authService.getCurrentUser().subscribe(user => {
+      this.user = user;
+    })
+  }
 
   getPeliculas () : Observable<any> {
     return this.http.get<any>(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.KEY}&language=es-ES&page=${this.page}&include_adult=true`).pipe(map((data: any) => data.results))
