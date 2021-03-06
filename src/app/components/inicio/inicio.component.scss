@@ -1,6 +1,9 @@
 @import "../../../variables.scss";
 div.peliculas-container {
   margin: 20vh 0 5vh 0;
+  @media #{$telefono}{
+    margin-top: 15vh;
+  }
   @extend .moviesContainer;
 }
 a {
@@ -17,6 +20,12 @@ a {
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.5s linear;
+
+    @media #{$telefono}{
+      width: 84vw;
+      font-size: 4vw;
+      padding: 4vh 0;
+    }
 
     i {
       margin-left: 2vw;

@@ -27,7 +27,6 @@ export class ListaComponent implements OnInit {
     this.currentPage = 1;
     this.peliculasSrv.resetPages();
     this.peliculas = this.peliculasSrv.getBusqueda(this.search);
-    console.log(this.peliculas);
   }
 
   nextPage(){

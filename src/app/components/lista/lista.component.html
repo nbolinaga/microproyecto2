@@ -9,9 +9,10 @@
     *ngFor="let pelicula of peliculas | async "
     [title]="pelicula.title"
     [imagen]="pelicula.poster_path"
-    [popularidad]="pelicula.vote_average"
+    [popularidad]="pelicula.popularity"
     [idioma]="pelicula.original_language"
     [date]="pelicula.release_date"
+    [id]="pelicula.id"
   >
   </app-pelicula-card>
 </div>

@@ -13,6 +13,8 @@ export class PeliculaCardComponent implements OnInit {
   @Input() idioma: string;
   @Input() imagen: string;
   @Input() date: number;
+  @Input() id: number;
+
 
   constructor(public authService: LoginService) {
     this.authService.getCurrentUser().subscribe(user => {
