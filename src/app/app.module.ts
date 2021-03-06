@@ -21,6 +21,7 @@ import { ListaComponent } from './components/lista/lista.component'
 import { FormsModule } from '@angular/forms';
 import { DetallesComponent } from './components/detalles/detalles.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     ListaComponent,
     DetallesComponent,
     FavoritesComponent,
+    ReservasComponent,
   ],
   imports: [
     BrowserModule,
