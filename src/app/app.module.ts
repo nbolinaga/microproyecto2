@@ -19,11 +19,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { ListaComponent } from './components/lista/lista.component'
 
 import { FormsModule } from '@angular/forms';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
-const routes: Routes = [
-  {path: '', component: InicioComponent},
-  {path: 'lista', component: ListaComponent},
-]
 
 @NgModule({
   declarations: [
@@ -34,11 +31,11 @@ const routes: Routes = [
     PeliculaCardComponent,
     InicioComponent,
     ListaComponent,
+    DetallesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
