@@ -24,12 +24,20 @@ export class PeliculaCardComponent implements OnInit {
 
   favorite: boolean = false;
   logged: firebase.User = null;
+  fav_string: string;
 
   ngOnInit(): void {
     this.imagen = "https://image.tmdb.org/t/p/original" + this.imagen
+    this.fav_string = localStorage.getItem(`${this.id}`);
+    if(this.fav_string === 'true'){
+      this.favorite = true;
+    } else {
+      this.favorite = false;
+    }
   }
 
   favorited(){
     this.favorite = !this.favorite;
+    localStorage.setItem(`${this.id}`, `${this.favorite}`)
   }
 }

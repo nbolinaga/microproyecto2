@@ -23,7 +23,7 @@ export class AuthComponent implements OnInit {
   async googleLogin(){
     const user = await this.authService.loginGoogle();
     if (user) {
-      this.router.navigate(['/']);
+      this.router.navigate(['/lista']);
     }
   }
 }

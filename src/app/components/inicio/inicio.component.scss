@@ -20,6 +20,7 @@ a {
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.5s linear;
+    box-shadow: 15px 15px 20px -5px rgba(0,0,0,0.8);
 
     @media #{$telefono}{
       width: 84vw;
