@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-pelicula-card',
@@ -10,11 +12,22 @@ export class PeliculaCardComponent implements OnInit {
   @Input() popularidad: number;
   @Input() idioma: string;
   @Input() imagen: string;
+  @Input() date: number;
 
-  constructor() { }
+  constructor(public authService: LoginService) {
+    this.authService.getCurrentUser().subscribe(user => {
+      this.logged = user;
+    })
+  }
+
+  favorite: boolean = false;
+  logged: firebase.User = null;
 
   ngOnInit(): void {
     this.imagen = "https://image.tmdb.org/t/p/original" + this.imagen
   }
 
+  favorited(){
+    this.favorite = !this.favorite;
+  }
 }

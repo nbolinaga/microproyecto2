@@ -15,7 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
-import { InicioComponent } from './components/inicio/inicio.component'
+import { InicioComponent } from './components/inicio/inicio.component';
+import { ListaComponent } from './components/lista/lista.component'
 
 const routes: Routes = [
   {path: '', component: InicioComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
     NavbarComponent,
     PeliculaCardComponent,
     InicioComponent,
+    ListaComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,8 +8,9 @@
       <ng-template [ngIf]="!user" [ngIfElse]="perfil"><a (click)="logIn()">INGRESAR</a></ng-template>
       <ng-template #perfil><a>{{user.displayName}}</a><img class="pp" [src]="user.photoURL" alt=""></ng-template>
     </li>
-    <li class="nav-item" *ngIf="user"><a (click)="logOut()" class="logOut">Log Out</a></li>
+    <li class="nav-item" *ngIf="user"><a (click)="logOut()" class="logOut"><i class="fas fa-sign-out-alt" ></i></a></li>
   </ul>
 </nav>
 <app-login *ngIf ="showLogIn"></app-login>
 <div id="closeModal" *ngIf ="showLogIn" (click)="logIn()"></div>
+

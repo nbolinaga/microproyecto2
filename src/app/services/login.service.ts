@@ -28,6 +28,7 @@ export class LoginService {
       localStorage.removeItem('user');
       return null;
     }
+    location.reload()
   }
 
   async logout(): Promise<void> {
@@ -37,6 +38,7 @@ export class LoginService {
     } catch (e) {
       localStorage.removeItem('user');
     }
+    location.reload()
   }
 
   getCurrentUser(): Observable<firebase.User>{

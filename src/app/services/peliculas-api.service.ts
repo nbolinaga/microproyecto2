@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PeliculasApiService {
-  URL_API = `https://api.themoviedb.org/3/search/movie?api_key=5ba4b657ce8be5d3b83bdfd09f8df740&query=1`;
+  URL_API = `https://api.themoviedb.org/3/discover/movie?api_key=5ba4b657ce8be5d3b83bdfd09f8df740&page=1-5`;
   constructor(private http: HttpClient) { }
 
   getPeliculas () : Observable<any> {
