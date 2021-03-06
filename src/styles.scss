@@ -10,8 +10,14 @@
 h1,h2,h3,h4,h5,h6,a{
   font-family: $primary;
 }
+
 p{
   font-family: $secondary;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a:visited{
@@ -22,11 +28,13 @@ body {
   background-color: $base;
   overflow-x: hidden;
 }
+
 button{
   &:focus{
     outline: none;
   }
 }
+
 button.btn-pri{
   border: none;
   background-color: $base;
@@ -42,6 +50,7 @@ button.btn-sec{
   cursor: pointer;
   font-weight: bold;
 }
+
 button.btn-alt{
   border: 3px solid $base;
   background-color: $blanco;
