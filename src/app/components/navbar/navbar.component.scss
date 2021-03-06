@@ -22,6 +22,9 @@ nav {
   height: 10vmin;
   @extend .center;
   background-color: $blanco;
+  @media #{$telefono}{
+    height: 12vmin;
+  }
 
   &::after {
     content: " ";
@@ -31,8 +34,15 @@ nav {
     height: 1vw;
     top: 10vmin;
     z-index: -1;
+    @media #{$telefono}{
+      top: 12vmin;
+    }
   }
-
+  h2.logo{
+    @media #{$telefono}{
+      display: none;
+    }
+  }
   ul{
     list-style: none;
     @extend .center;
@@ -44,12 +54,18 @@ nav {
       font-weight: bold;
       font-size: 1.5vw;
       @extend .center;
+      @media #{$telefono}{
+        font-size: 3vw;
+      }
 
       a{
         color: $detalles;
         &.logOut{
           color: $base;
           font-size: 3vw;
+          @media #{$telefono}{
+            font-size: 5vw;
+          }
         }
       }
 
@@ -60,11 +76,10 @@ nav {
         margin-left: 1vw;
         list-style: none;
         display: flex;
+        @media #{$telefono}{
+          display: none;
+        }
       }
     }
   }
-}
-
-//Telefono
-@media only screen and (max-width: 768px) and (orientation: portrait) {
 }
