@@ -46,10 +46,7 @@ nav {
       @extend .center;
 
       a{
-        text-decoration: none;
         color: $detalles;
-        cursor: pointer;
-
         &.logOut{
           color: $base;
           font-size: 3vw;
