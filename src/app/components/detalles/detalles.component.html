@@ -12,7 +12,7 @@
     <p class="overview">{{peliculas.overview}}</p>
     <p>Idioma: <span>{{peliculas.spoken_languages[0].name}}</span></p>
     <p>Generos:<span *ngFor="let generos of peliculas.genres"> {{generos.name}} </span></p>
-    <p>Presupuesto: <span>${{peliculas.budget}}</span></p>
+    <p>Presupuesto: <span>{{peliculas.budget | currency}}</span></p>
     <p>Popularidad: <span>{{peliculas.vote_average}}</span></p>
     <p>Productoras: <br><span *ngFor="let productora of peliculas.production_companies"> {{productora.name}} </span></p>
     <p>Estreno: <span>{{peliculas.release_date}}</span></p>
