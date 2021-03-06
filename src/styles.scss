@@ -7,8 +7,11 @@
 
 }
 
-h1,h2,h3,h4,h5,h6,p,a{
+h1,h2,h3,h4,h5,h6,a{
   font-family: $primary;
+}
+p{
+  font-family: $secondary;
 }
 
 a:visited{
@@ -19,15 +22,26 @@ body {
   background-color: $base;
   overflow-x: hidden;
 }
-
+button{
+  &:focus{
+    outline: none;
+  }
+}
 button.btn-pri{
   border: none;
   background-color: $base;
   padding: 2vh 3vw;
-  border-radius: 5px;
   cursor: pointer;
 }
 
+button.btn-sec{
+  color: $detalles;
+  border: 3px solid $base;
+  background-color: $blanco;
+  padding: 1.5vh 3vw;
+  cursor: pointer;
+  font-weight: bold;
+}
 button.btn-alt{
   border: 3px solid $base;
   background-color: $blanco;
