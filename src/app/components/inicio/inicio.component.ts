@@ -17,6 +17,6 @@ export class InicioComponent implements OnInit {
   }
 
   getPelicula(){
-    this.allPeliculas = this.peliculasSrv.getPeliculas();
+    this.allPeliculas = this.peliculasSrv.getEstrenos();
   }
 }
