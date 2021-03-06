@@ -1,0 +1,32 @@
+@import "../../../variables.scss";
+div.lista-container{
+  margin: 20vh 0 5vh 0;
+  @extend .moviesContainer;
+}
+.top{
+  margin-top: 20vh;
+}
+.paginacion{
+  width: 100vw;
+  @extend .center;
+
+  button{
+    font-size: 5vw;
+    font-family: $secondary;
+    color: $blanco;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  input{
+    width: 50vw;
+    height: 8vh;
+    text-align: center;
+    font-size: 1.5vw;
+  }
+}
+h3{
+  color: $blanco;
+  text-align: center;
+}
