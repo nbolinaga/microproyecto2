@@ -1,12 +1,16 @@
 @import "../../../variables.scss";
 div.pelicula-container{
-  width: 20vw;
+  width: 100%;
   overflow: hidden;
   height: 60vh;
+  @media #{$telefono}{
+    height: 50vh;
+  }
   background-color: $blanco;
   text-align: center;
   position: relative;
   cursor: pointer;
+
 
   &::after{
     content: " ";
@@ -21,13 +25,20 @@ div.pelicula-container{
 
   h4{
     color: $detalles;
-    font-size: 2vw;
+    font-size: 2vmax;
+    margin: 0 2vw;
+    @media #{$telefono}{
+      font-size: 3.5vmax;
+      margin: 0 3.5vw;
+    }
   }
 
   p{
     margin: .5vw;
     color: $base;
-
+    @media #{$telefono}{
+      font-size: 2vmax;
+    }
     span{
       color: $light;
     }
@@ -42,6 +53,12 @@ div.pelicula-container{
     color: $detalles;
     font-size: 1.5vw;
     cursor: pointer;
+
+    @media #{$telefono}{
+      font-size: 8vw;
+      bottom: 6vw;
+      right: 3vw;
+    }
   }
   img{
     position: relative;

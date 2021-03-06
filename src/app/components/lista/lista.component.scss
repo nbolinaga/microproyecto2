@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+div.lista-container{
+  margin: 20vh 0 5vh 0;
+  @media #{$telefono}{
+    margin-top: 5vh;
+  }
+  @extend .moviesContainer;
+}
+.top{
+  margin-top: 20vh;
+  @media #{$telefono}{
+    margin-top: 10vh;
+  }
+}
+.paginacion{
+  width: 100vw;
+  @extend .center;
+
+  button{
+    font-size: 5vw;
+    font-family: $secondary;
+    color: $blanco;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @media #{$telefono}{
+      font-size: 7vw;
+    }
+  }
+
+  input{
+    width: 50vw;
+    height: 8vh;
+    text-align: center;
+    font-size: 1.5vw;
+    @media #{$telefono}{
+      width: 70vw;
+      height: 4vh;
+      font-size: 4vw;
+    }
+  }
+}
+h3{
+  color: $blanco;
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+<div class="paginacion top">
+  <button (click)="prevPage()" class="left"><</button>
+  <input type="text" placeholder="buscar" [(ngModel)]="search" (keyup.enter)="getBusqueda()">
+  <button (click)="nextPage()" class="right">></button>
+</div>
+<h3>{{currentPage}}</h3>
+<div class="lista-container">
+  <app-pelicula-card
+    *ngFor="let pelicula of peliculas | async "
+    [title]="pelicula.title"
+    [imagen]="pelicula.poster_path"
+    [popularidad]="pelicula.popularity"
+    [idioma]="pelicula.original_language"
+    [date]="pelicula.release_date"
+    [id]="pelicula.id"
+  >
+  </app-pelicula-card>
+</div>
+<div class="paginacion">
+  <button (click)="prevPage()" class="left"><</button>
+  <h3>{{currentPage}}</h3>
+  <button (click)="nextPage()" class="right">></button>
+</div>

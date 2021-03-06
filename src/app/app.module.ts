@@ -18,9 +18,9 @@ import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.
 import { InicioComponent } from './components/inicio/inicio.component';
 import { ListaComponent } from './components/lista/lista.component'
 
-const routes: Routes = [
-  {path: '', component: InicioComponent},
-]
+import { FormsModule } from '@angular/forms';
+import { DetallesComponent } from './components/detalles/detalles.component';
+
 
 @NgModule({
   declarations: [
@@ -31,16 +31,17 @@ const routes: Routes = [
     PeliculaCardComponent,
     InicioComponent,
     ListaComponent,
+    DetallesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,65 @@
+@import "../../../variables.scss";
+.detalles-container{
+  padding: 10vw;
+  @extend .center;
+  height: auto;
+  @media #{$telefono}{
+    padding: none;
+    display: block;
+  }
+
+  img{
+    width: auto;
+    height: 60vh;
+    margin: 5vh;
+    @media #{$telefono}{
+      width: 80vw;
+      margin: 5vh 0;
+    }
+  }
+  .info{
+
+
+
+    h2{
+      font-size: 3vw;
+      color: $light;
+      @media #{$telefono}{
+        font-size: 8vw;
+        text-align: center;
+      }
+
+      .favButton{
+        padding-right: 2vw;
+        background-color: transparent;
+        border: none;
+        font-size: 3vw;
+        color: $detalles;
+        cursor: pointer;
+        text-align: right;
+        @media #{$telefono}{
+          font-size: 8vw;
+        }
+      }
+    }
+
+    p{
+      color: $blanco;
+      margin: 2vh 0;
+
+
+      &.overview{
+        @media #{$telefono}{
+          text-align: justify;
+        }
+      }
+      span{
+        color: $light;
+      }
+      span + span::before {
+        content: " - ";
+        margin: 0 10px;
+      }
+    }
+  }
+}

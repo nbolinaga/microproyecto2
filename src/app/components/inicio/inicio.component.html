@@ -3,10 +3,11 @@
     *ngFor="let pelicula of allPeliculas | async | slice:0:8"
     [title]="pelicula.title"
     [imagen]="pelicula.poster_path"
-    [popularidad]="pelicula.vote_count"
+    [popularidad]="pelicula.vote_average"
     [idioma]="pelicula.original_language"
     [date]="pelicula.release_date"
+    [id]="pelicula.id"
   >
   </app-pelicula-card>
 </div>
-<button class="btn-sec lista"><a>Lista de Películas</a> <i class="fas fa-caret-right"></i></button>
+<a [routerLink]="['lista']"><button class="btn-sec lista">Lista de Películas <i class="fas fa-caret-right"></i></button></a>

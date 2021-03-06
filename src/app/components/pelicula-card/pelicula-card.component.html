@@ -1,9 +1,9 @@
 <div class="pelicula-container">
-  <img [src]="imagen" alt="">
+  <img [src]="imagen" alt="" [routerLink]="['/detalles/', id]">
   <h4>{{title}}</h4>
-  <p>Popularidad: <span>{{popularidad}}</span></p>
   <p>Idioma: <span>{{idioma}}</span></p>
   <p>Estreno: <span>{{date}}</span></p>
+  <p>Popularidad: <span>{{popularidad}}</span></p>
   <button (click)="favorited()" class="favButton" *ngIf="logged">
     <ng-template [ngIf]="!favorite" [ngIfElse]="fav"><i class="far fa-heart"></i></ng-template>
     <ng-template #fav><i class="fas fa-heart"></i></ng-template>

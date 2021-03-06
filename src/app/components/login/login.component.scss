@@ -23,6 +23,10 @@
       align-items: center;
       border-radius: 5px;
       pointer-events: auto;
+      @media #{$telefono}{
+        width: 80vw;
+        padding: 20vw 10vw;
+      }
   }
 }
 
